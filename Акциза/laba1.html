@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<body>
+	<meta charset="utf-8" />
+	<link rel="stylesheet" href="style.css">
+</head>
+<body class="Button">
+<form  name="search">
+	<input type="button" name="print" value="Створити акцизу" /> 
+
+	
+</form>
+<div id="printAc">Результат:</div>
+
+<script>
+function getRandomInt(min, max) 
+{
+min = Math.ceil(min);
+max = Math.floor(max);
+return Math.floor(Math.random() * (max - min) + min);
+}
+
+function printAc(e)
+{
+	var str = "11161111";
+	var printBlock = document.getElementById("printAc");
+	var pElement = document.createElement("p");
+for (let i = 0; i < 8; i++) 
+	{
+        var str = str.substring(0,i) + getRandomInt(0,10) + str.substring(i+1,str.length);
+    }
+	pElement.textContent = str;
+	printBlock.appendChild(pElement);
+}
+var printButton = document.search.print;
+printButton.addEventListener("click", printAc);
+</script>
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+    <script>
+        function myFunction() {
+            let number1,number2,res_L;
+            number1 = document.getElementById("number1").value;
+            number2 = document.getElementById("number2").value;
+            res_L = number1 * number2;
+            document.getElementById("res_L").innerText = res_L;
+
+            
+        }
+    </script>
+    
+</head>
+<body> 
+    <table border="1" >
+        <tr>
+            <th>Дано</th>
+            <th>Числа</th> 
+        
+        </tr>
+        <tr>
+            <th>V=</th><th id="num1"><input type="number" id="number1"></th>
+        </tr>
+        <tr>
+            <th>t=</th><th id="num2"><input type="number" id="number2"></th>
+        </tr>
+        <tr>
+            <th>L=</th><th id="res_L"></th>
+        </tr>
+        <tr>
+            <th>Min</th><th id="Min">1500</th>
+        </tr>
+        <tr>
+            <th>Max</th><th id="Max">2500</th>
+        </tr>
+    </table>
+    <button class="button" onclick="myFunction()">Розрахунок</button>  
+</body>
+</html>
